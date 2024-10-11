@@ -10,6 +10,7 @@ using System;
 using System.Drawing;
 using NPOI.SS.UserModel;
 using NPOI.SS.Util;
+using SixLabors.ImageSharp;
 
 namespace NPOI.Extend
 {

@@ -258,7 +258,7 @@ namespace NPOI.Extend
         {
             var picturesInfoList = new List<PictureInfo>();
 
-            List<POIXMLDocumentPart> documentPartList = sheet.GetRelations();
+            var documentPartList = sheet.GetRelations();
             foreach (POIXMLDocumentPart documentPart in documentPartList)
             {
                 if (documentPart is XSSFDrawing)
@@ -347,7 +347,7 @@ namespace NPOI.Extend
         private static void RemovePictures(XSSFSheet sheet, int? minRow, int? maxRow, int? minCol, int? maxCol,
             bool onlyInternal)
         {
-            List<POIXMLDocumentPart> documentPartList = sheet.GetRelations();
+            var documentPartList = sheet.GetRelations();
             foreach (POIXMLDocumentPart documentPart in documentPartList)
             {
                 if (documentPart is XSSFDrawing)

@@ -8,6 +8,8 @@
 
 using System.Drawing;
 using System.IO;
+using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.Formats.Png;
 
 namespace NPOI.Extend
 {
@@ -17,7 +19,7 @@ namespace NPOI.Extend
         {
             using (var ms = new MemoryStream())
             {
-                img.Save(ms, img.RawFormat);
+                img.Save(ms, new PngEncoder());
                 ms.Flush();
                 ms.Position = 0;
                 return ms.GetBuffer();
